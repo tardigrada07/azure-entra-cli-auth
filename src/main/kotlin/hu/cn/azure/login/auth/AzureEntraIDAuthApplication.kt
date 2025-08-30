@@ -5,6 +5,7 @@ import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 import org.springframework.stereotype.Component
+import javax.security.sasl.AuthenticationException
 
 @SpringBootApplication
 class AzureEntraIDAuthApplication
@@ -32,13 +33,13 @@ class AzureEntraIDAuthCommandLineRunner(
             println("Department: ${userInfo.department ?: "Not provided"}")
             println("Office Location: ${userInfo.officeLocation ?: "Not provided"}")
 
-        } catch (e: Exception) {
+        } catch (e: AuthenticationException) {
             println("\nAuthentication failed!")
             println("Error: ${e.message}")
         }
     }
 }
 
-fun main(args: Array<String>) {
-    runApplication<AzureEntraIDAuthApplication>(*args)
+fun main() {
+    runApplication<AzureEntraIDAuthApplication>()
 }

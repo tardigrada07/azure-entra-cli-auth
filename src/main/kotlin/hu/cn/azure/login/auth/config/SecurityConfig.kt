@@ -18,5 +18,4 @@ class SecurityConfig {
             .authorizeHttpRequests { it.anyRequest().permitAll() }
             .build()
     }
-
 }

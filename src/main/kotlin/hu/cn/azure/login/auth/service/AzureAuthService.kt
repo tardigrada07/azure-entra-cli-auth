@@ -6,6 +6,7 @@ import com.microsoft.graph.serviceclient.GraphServiceClient
 import jakarta.annotation.PostConstruct
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.stereotype.Service
+import javax.security.sasl.AuthenticationException
 
 
 @Service
@@ -21,7 +22,7 @@ class AzureAuthService {
     private lateinit var redirectUrl: String
 
     @PostConstruct
-    private fun validateConfiguration() {
+    fun validateConfiguration() {
         require(clientId.isNotBlank()) { "Azure client ID must be configured" }
         require(tenantId.isNotBlank()) { "Azure tenant ID must be configured" }
         require(redirectUrl.isNotBlank()) { "Azure redirect URL must be configured" }
@@ -39,7 +40,7 @@ class AzureAuthService {
         // Fetch current user's data
         return graphClient
             .me()
-            .get() ?: throw RuntimeException("Failed to retrieve user information")
+            .get() ?: throw AuthenticationException("Failed to retrieve user information")
     }
 
     companion object {
