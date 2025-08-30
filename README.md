@@ -5,6 +5,7 @@ information (display name, email, phone, ...) using Microsoft Graph.
 
 ## Status
 [![Kotlin CI with Gradle](https://github.com/tardigrada07/azure-entra-cli-auth/actions/workflows/gradle.yml/badge.svg)](https://github.com/tardigrada07/azure-entra-cli-auth/actions/workflows/gradle.yml)
+[![Scan with Detekt](https://github.com/tardigrada07/azure-entra-cli-auth/actions/workflows/detekt.yml/badge.svg)](https://github.com/tardigrada07/azure-entra-cli-auth/actions/workflows/detekt.yml)
 
 ## Prerequisites
 - Java 21 installed
