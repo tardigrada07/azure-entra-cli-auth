@@ -1,0 +1,5 @@
+#/bin/sh
+
+export AZURE_CLIENT_ID="FIXME"
+export AZURE_TENANT_ID="FIXME"
+export AZURE_REDIRECT_URL="http://127.0.0.1:8400"
