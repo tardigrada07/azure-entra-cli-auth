@@ -3,6 +3,9 @@ A command-line Kotlin (Java 21) application that authenticates a user with Micro
 it opens your system browser to the Microsoft login page. After successful sign-in, it retrieves and prints user 
 information (display name, email, phone, ...) using Microsoft Graph.
 
+## Status
+[![Kotlin CI with Gradle](https://github.com/tardigrada07/azure-entra-cli-auth/actions/workflows/gradle.yml/badge.svg)](https://github.com/tardigrada07/azure-entra-cli-auth/actions/workflows/gradle.yml)
+
 ## Prerequisites
 - Java 21 installed
 - Gradle wrapper (included) or Gradle installed
